@@ -1,3 +1,18 @@
+:root {
+  --fontColor: #102c57;
+  --font-size: 16px;
+  --bgColor: #f8f0e5;
+  --subTitleColor: #eadbc8;
+}
+/* Define the keyframes for the animation */
+@keyframes colorChange {
+  from {
+    color: #dac0a3;
+  }
+  to {
+    color: #f8f0e5; /* Change the color to your desired hover color */
+  }
+}
 /*Color Palette 220330*/
 html,
 body {
@@ -5,7 +20,9 @@ body {
   height: 100%;
   max-height: 100%;
 }
-
+#bag-store-title {
+  animation: colorChange 0.3s ease-in-out;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -13,21 +30,33 @@ body {
 
 header {
   flex: 1;
-  background-color: #fae0df;
-  color: #16a596;
+  background-color: var(--bgColor);
+  color: var(--fontColor);
   max-width: 100%;
+  border-radius: 0px 0px 7px 7px;
 }
 #wrapper {
   display: flex;
-  justify-content: space-between;
   text-transform: uppercase;
   margin: 10px;
+  align-items: baseline;
+  justify-content: center;
 }
-
+/* 
 #right-sidebar {
   font-size: 1.5em;
-  color: #16a596;
+  color: var(--fontColor);
 }
+#right-sidebar a {
+  text-decoration: none;
+  color: var(--fontColor);
+  transition: color 0.5s;
+}
+
+#right-sidebar a:hover {
+  color: #898b8a;
+  border-bottom: 1px solid skyblue;
+} */
 
 #app {
   flex: 9;
@@ -37,23 +66,19 @@ header {
 #menu {
   flex: 1;
 }
+#menu > ul > li > a {
+  color: var(--fontColor);
+  text-decoration: none;
+}
 
+#menu_title {
+  color: var(--fontColor);
+}
 #main {
   flex: 6;
   /* background-image: url('images/background.jpg'); */
   background-position: center center;
   background-size: cover;
-}
-
-#right-sidebar a {
-  text-decoration: none;
-  color: #16a596;
-  transition: color 0.5s;
-}
-
-#right-sidebar a:hover {
-  color: #898b8a;
-  border-bottom: 1px solid skyblue;
 }
 
 /*  cards */
@@ -96,10 +121,14 @@ header {
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #898b8a;
+  color: var(--subTitleColor);
   margin-bottom: 18px;
 }
-
+.card-title {
+  color: var(--fontColor);
+  font-weight: bold;
+  font-size: larger;
+}
 .product-details h4 a {
   font-weight: 500;
   display: block;
@@ -118,7 +147,7 @@ header {
   font-size: 15px;
   line-height: 22px;
   margin-bottom: 18px;
-  color: #16a596;
+  /* color: var(--fontColor); */
 }
 
 .product-bottom-details {
@@ -133,8 +162,8 @@ header {
 }
 
 .product-price {
-  font-size: 20px;
-  color: #31326f;
+  font-size: 15px;
+  color: var(--fontColor);
   font-weight: 600;
 }
 
@@ -153,18 +182,18 @@ header {
   padding: 2px;
 }
 .app li {
-  color: #16a596;
+  color: var(--fontColor);
 }
 /**/
 ul {
-  color: #fae0df;
+  color: var(--bgColor);
 }
 
 /*footer*/
 #bottom {
   margin-top: 0.8em;
   text-align: right;
-  color: #c060a1;
+  color: var(--fontColor);
 }
 #bottom label {
   font-family: Roboto, sans-serif;
@@ -182,7 +211,7 @@ input:focus {
 }
 
 input[type="submit"] {
-  background-color: #e6739f;
-  color: #f1d4d4;
+  background-color: var(--fontColor);
+  color: var(--subTitleColor);
   text-align: left;
 }

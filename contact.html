@@ -18,7 +18,7 @@
       <div id="wrapper" class="container">
         <div class="headerTitle">
           <h1>Contact Us</h1>
-          <h4><a href="index.html">Home page</a></h4>
+          <h4><a href="index.html" id="contact_homeTitle">Home page</a></h4>
         </div>
 
         <p>The information with * must be filled in.</p>
@@ -219,8 +219,13 @@
             accept="image/png, image/jpeg"
           />
         </div>
-        <div class="d-flex flex-row-reverse bd-highlight mt-3">
-          <input
+        <div class="btn-container">
+          <div class="btn-sid-container">
+            <button id="submit_btn" class="file-btn">Submit</button>
+            <button id="clear_btn" class="file-btn">Clear</button>
+          </div>
+
+          <!-- <input
             class="btn btn-warning"
             type="reset"
             name="reset"
@@ -233,7 +238,7 @@
             name="submit"
             value="Submit"
             tabindex="15"
-          />
+          /> -->
         </div>
 
         <input type="hidden" name="source" value="Linia Lin" />
